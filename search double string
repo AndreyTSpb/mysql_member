@@ -1,0 +1,8 @@
+SELECT * FROM table
+WHERE id
+IN (
+SELECT id
+FROM table
+GROUP BY name
+HAVING COUNT( name ) > 1
+);
